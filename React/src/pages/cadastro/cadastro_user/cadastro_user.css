@@ -32,7 +32,7 @@
     width: 1px;
     height: 1px;
     border: solid 420px transparent;
-    border-bottom: solid 320px #00DEA2;
+    border-bottom: solid 320px #008763;
     border-right-width: 117.5px;
     border-top: none;
     transform: rotate(180deg);
@@ -62,12 +62,12 @@
 }
 
 .form-cdu{
-    width: 165%;
+    width: 195%;
     height: 100%;
     /* background-color: blue; */
 
     position: relative;
-    right: 110px;
+    right: 210px;
 
     display: flex;
     flex-direction: column;
@@ -76,15 +76,164 @@
 }
 
 .inputs-cdu{
-    height: 60%;
+    height: 80%;
     width: 100%;
     /* background-color: brown; */
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.NomeCompleto-cdu{
+    height: 70%;
+    width: 80%;
+
+    padding-left: 10px;
+    color: black;
+    font-family: Share;
+    font-size: 20px;
+
+    border-radius: 7px;
+    border: 3px solid #008763;
+}
+
+.NomeCompleto-cdu::placeholder{
+    color: black;
+}
+
+.Nome-cdu{
+    height: 15%;
+    width: 100%;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.inpInfs-cdu{
+    height: 15%;
+    width: 88%;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infs-cdu{
+    height: 70%;
+    width: 40%;
+
+    padding-left: 10px;
+    color: black;
+    font-family: Share;
+    font-size: 20px;
+
+    border-radius: 7px;
+    border: 3px solid #008763;
+}
+
+.infs-cdu::placeholder{
+    color: black;
+}
+
+.endereco-cdu{
+    width: 88%;
+    height: 15%;
+    /* background-color: blueviolet; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Share;
+    font-size: 20px;
+}
+
+.cpf-cdu{
+    width: 70%;
+    height: 15%;
+    /* background-color: chartreuse; */
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cpfInp-cdu{
+    height: 70%;
+    width: 30%;
+
+    color: black;
+    font-family: Share;
+    font-size: 20px;
+
+    border-radius: 7px;
+    border: 3px solid #008763;
+
+    display: flex;
+    padding-left: 10px;
+}
+
+.cpfInp-cdu::placeholder{
+    color: black;
+}
+
+.btnCpf-cdu{
+    height: 70%;
+    width: 30%;
+
+    color: rgb(255, 255, 255);
+    font-family: Share;
+    font-size: 20px;
+
+    border-radius: 7px;
+    background-color:#008763;
+    border: solid 3px #00DEA2;
+
+    transition: 0.5s;
+}
+
+.btnCpf-cdu:hover{
+    color: black;
+    background-color: white;
+}
+
+.cpf-Inputs{
+    width: 100%;
+    /* background-color: yellow; */
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cpfIn-cdu{
+    width: 30%;
+    height: 70%;
+
+    color: black;
+    font-family: Share;
+    font-size: 20px;
+    padding-left: 10px;
+
+    border-radius: 7px;
+    border: 3px solid #008763;
+}
+
+.cpfIn-cdu::placeholder{
+    color: black;
 }
 
 .h1-cdu{
@@ -92,23 +241,6 @@
     font-size: 30px;
     font-family: staatliches;
     font-weight: normal;
-}
-
-.inp-cdu{
-    height: 15%;
-    width: 45%;
-
-    border-radius: 10px;
-    border: 3px solid #00DEA2;
-
-    padding-left: 10px;
-
-    font-family: Share;
-    font-size: 17px;
-}
-
-.inp-cdu::placeholder{
-    color: black;
 }
 
 .btn-cdu{
@@ -122,10 +254,10 @@
     font-size: 20px;
     font-family: share;
 
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .btn-cdu:hover{
-    border-color: #00DEA2;
-    color: #00DEA2;
+    border-color: #008763;
+    color: black;
 }

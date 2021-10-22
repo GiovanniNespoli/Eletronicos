@@ -74,11 +74,32 @@ class User extends Component
               <h1 className="h1-cdu">Cadastro do usuário</h1>
 
               <div className="inputs-cdu">
-                <input type="text" placeholder="Nome" name="NomeInteiro" value={this.state.NomeInteiro} onChange={this.alterarStates} className="inp-cdu"/>
-                <MaskedInput mask="(11)11111-1111" name="celular" value={this.state.celular} onChange={this.alterarStates} placeholder="Celular" className="inp-cdu"/>
-                <MaskedInput mask="11.111.111-1" name="RG" value={this.state.RG} onChange={this.alterarStates} placeholder="RG" className="inp-cdu"/>
-                <input type="email" placeholder="Email" name="Email" value={this.state.Email} onChange={this.alterarStates} className="inp-cdu"/>
-                <input type="password" placeholder="Senha" name="Senha" value={this.state.Senha} onChange={this.alterarStates} className="inp-cdu"/>
+                <div className="Nome-cdu"> 
+                  <input className="NomeCompleto-cdu" placeholder="Nome completo"></input>
+                </div>
+
+                <div className="inpInfs-cdu">
+                  <MaskedInput mask="(11)11111-1111" className="infs-cdu" placeholder="Celular" type="text" />
+                </div>
+                <div className="inpInfs-cdu">
+                  <input className="infs-cdu" placeholder="Email" type="email"/>
+                  <input className="infs-cdu" placeholder="Senha" type="password"/>
+                </div>
+
+                <div className="endereco-cdu">
+                  <h3>- Endereço -</h3>
+                </div>
+
+                <div className="cpf-cdu">
+                  <MaskedInput mask="11111-11" className="cpfInp-cdu" placeholder="CEP"/>
+                  <button className="btnCpf-cdu">Buscar</button>
+                </div>
+
+                <div className="cpf-Inputs">
+                  <input className="cpfIn-cdu" placeholder="Rua" type="text"/>
+                  <input className="cpfIn-cdu" placeholder="Número" type="text"/>
+                  <input className="cpfIn-cdu" placeholder="Complemento" type="text"/>
+                </div>
               </div>
 
               <button className="btn-cdu" type="submit">Cadastrar</button>

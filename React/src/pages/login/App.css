@@ -33,7 +33,7 @@
     width: 1px;
     height: 1px;
     border: solid 420px transparent;
-    border-bottom: solid 320px #00DEA2;
+    border-bottom: solid 320px #008763;
     border-right-width: 117.5px;
     border-top: none;
     transform: rotate(180deg);
@@ -46,6 +46,7 @@
 .login-lg{
     position: relative;
     right: 150px;
+    padding-top: 40px;
 
     height: 100vh;
     /* background-color: #f00;  */
@@ -80,8 +81,8 @@
 .input-lg{
     height: 15%;
     width: 130%;
-    border: 3px solid #00DEA2;
-    border-radius: 20px;
+    border: 3px solid #008763;
+    border-radius: 7px;
 
     padding-left: 30px;
     opacity: 100;

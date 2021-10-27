@@ -1,7 +1,13 @@
 import { Component } from 'react';
+
+import login from '../../../img/img.svg'
+import pass from '../../../img/pass.svg'
+
 import './cadastro_user.css'
+
 import MaskedInput from 'react-maskedinput';
 import axios from 'axios';
+
 import { parseJWT } from '../../../services/auth';
 import { post } from 'jquery';
 
@@ -64,50 +70,31 @@ class User extends Component
   {
     return(
       <main className="main-cdu">
-        <div className="dois-cdu"></div>
-        <div className="triangulo-cdu"></div>
+        <div className="img-cdu">
+          <img className="imgCtn-cdu" src={login}/>
+        </div>
 
-        <section className="sec-cdu">
-          <div className="ctn-cdu">
-            <form className="form-cdu" onSubmit={this.cadastraUser}>
+        <div className="cad-cdu">
+          <div className="cadInputs-cdu">
+            <h1 className="h1-cdu">cadastro</h1>
 
-              <h1 className="h1-cdu">Cadastro do usuário</h1>
-
-              <div className="inputs-cdu">
-                <div className="Nome-cdu"> 
-                  <input className="NomeCompleto-cdu" placeholder="Nome completo"></input>
-                </div>
-
-                <div className="inpInfs-cdu">
-                  <MaskedInput mask="(11)11111-1111" className="infs-cdu" placeholder="Celular" type="text" />
-                </div>
-                <div className="inpInfs-cdu">
-                  <input className="infs-cdu" placeholder="Email" type="email"/>
-                  <input className="infs-cdu" placeholder="Senha" type="password"/>
-                </div>
-
-                <div className="endereco-cdu">
-                  <h3>- Endereço -</h3>
-                </div>
-
-                <div className="cpf-cdu">
-                  <MaskedInput mask="11111-11" className="cpfInp-cdu" placeholder="CEP"/>
-                  <button className="btnCpf-cdu">Buscar</button>
-                </div>
-
-                <div className="cpf-Inputs">
-                  <input className="cpfIn-cdu" placeholder="Rua" type="text"/>
-                  <input className="cpfIn-cdu" placeholder="Número" type="text"/>
-                  <input className="cpfIn-cdu" placeholder="Complemento" type="text"/>
-                </div>
+            <form className="form-cdu">
+              <div className="input-cdu">
+                <input className="inputCtn-cdu" placeholder="Nome completo" type="text"/>
+                <MaskedInput mask="(11)11111-1111" className="inputCtn-cdu" placeholder="Celular" type="text"/>
               </div>
-
-              <button className="btn-cdu" type="submit">Cadastrar</button>
+                <div className="linha-cdu">
+                  <div className="linhaCtn-cdu"></div>
+                </div>
+              <div className="input-cdu">
+                <input className="inputCtn-cdu" placeholder="Email" type="email"/>
+                <input className="inputCtn-cdu" placeholder="Senha" type="password"/>
+              </div>
             </form>
 
+            <button className="btn-cdu"><img className="btnPass-cdu" src={pass}/></button>
           </div>
-
-        </section>
+        </div>
       </main>
     );
   }

@@ -7,257 +7,114 @@
 }
 
 .main-cdu{
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-direction: row;
     width: 100%;
     height: 100vh;
-}
-
-.dois-cdu{
-    background-color: rgb(255, 127, 223);
-
-    line-height:0; /* correção para IE (arg!) */
-    width:0;
-    height:0;
-    border: solid;
-    border-color: #fff #fff #2B3542 #2B3542;
-    border-width: 0vh 270px 100vh;
-    padding-left: 100px;
-}
-
-.triangulo-cdu{
-    /* background-color: rgb(55, 0, 255); */
-
-    width: 1px;
-    height: 1px;
-    border: solid 420px transparent;
-    border-bottom: solid 320px #008763;
-    border-right-width: 117.5px;
-    border-top: none;
-    transform: rotate(180deg);
-
-    position: relative;
-    right: 277.5px;
-
-}
-
-.sec-cdu{
-    width: 100%;
-    height: 100%;
-    /* background-color: rgb(195, 19, 19); */
-
-    position: relative;
-    right: 140px;
+    /* background-color: aqua; */
 
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ctn-cdu{
-    width: 100%;
-    height: 80%;
-    /* background-color: black; */
-}
-
-.form-cdu{
-    width: 195%;
-    height: 100%;
-    /* background-color: blue; */
-
-    position: relative;
-    right: 210px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: row;
 }
 
-.inputs-cdu{
-    height: 80%;
-    width: 100%;
-    /* background-color: brown; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.NomeCompleto-cdu{
-    height: 70%;
-    width: 80%;
-
-    padding-left: 10px;
-    color: black;
-    font-family: Share;
-    font-size: 20px;
-
-    border-radius: 7px;
-    border: 3px solid #008763;
-}
-
-.NomeCompleto-cdu::placeholder{
-    color: black;
-}
-
-.Nome-cdu{
-    height: 15%;
-    width: 100%;
-    /* background-color: green; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
-}
-
-.inpInfs-cdu{
-    height: 15%;
-    width: 88%;
-    /* background-color: blue; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.infs-cdu{
-    height: 70%;
-    width: 40%;
-
-    padding-left: 10px;
-    color: black;
-    font-family: Share;
-    font-size: 20px;
-
-    border-radius: 7px;
-    border: 3px solid #008763;
-}
-
-.infs-cdu::placeholder{
-    color: black;
-}
-
-.endereco-cdu{
-    width: 88%;
-    height: 15%;
+.img-cdu{
+    width: 30%; 
+    height: 100vh;
     /* background-color: blueviolet; */
+}
+
+.imgCtn-cdu{
+    height: 100vh;
+    /* background-color: blue; */
+}
+
+.cad-cdu{
+    height: 100vh;
+    width: 60%;
+    /* background-color: goldenrod; */
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: Share;
-    font-size: 20px;
 }
 
-.cpf-cdu{
-    width: 70%;
-    height: 15%;
-    /* background-color: chartreuse; */
+.cadInputs-cdu{
+    width: 80%;
+    height: 70%;
+    /* background-color: greenyellow; */
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
 
-.cpfInp-cdu{
-    height: 70%;
-    width: 30%;
-
-    color: black;
-    font-family: Share;
-    font-size: 20px;
-
-    border-radius: 7px;
-    border: 3px solid #008763;
-
-    display: flex;
-    padding-left: 10px;
-}
-
-.cpfInp-cdu::placeholder{
-    color: black;
-}
-
-.btnCpf-cdu{
-    height: 70%;
-    width: 30%;
-
-    color: rgb(255, 255, 255);
-    font-family: Share;
-    font-size: 20px;
-
-    border-radius: 7px;
-    background-color:#008763;
-    border: solid 3px #00DEA2;
-
-    transition: 0.5s;
-}
-
-.btnCpf-cdu:hover{
-    color: black;
-    background-color: white;
-}
-
-.cpf-Inputs{
-    width: 100%;
-    /* background-color: yellow; */
-    height: 15%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.cpfIn-cdu{
-    width: 30%;
-    height: 70%;
-
-    color: black;
-    font-family: Share;
-    font-size: 20px;
-    padding-left: 10px;
-
-    border-radius: 7px;
-    border: 3px solid #008763;
-}
-
-.cpfIn-cdu::placeholder{
-    color: black;
 }
 
 .h1-cdu{
-    text-align: center;
-    font-size: 30px;
-    font-family: staatliches;
-    font-weight: normal;
+    font-family: Staatliches;
+    letter-spacing: 2px;
 }
 
-.btn-cdu{
-    height: 7%;
-    width: 30%;
+.form-cdu{
+    height: 50%;
+    width: 100%;
+    /* background-color: grey; */
 
+    display: flex;
+    flex-direction: row;
+}
+
+.input-cdu{
+    width: 45%;
+    height: 100%;
+    /* background-color: hotpink; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputCtn-cdu{
+    width: 100%;
+    height: 25%;
+
+    border: 3px solid #00873B;
     border-radius: 10px;
-    border: 3px solid #2B3542;
+
+    padding-left: 10px;
+
+    font-family: Share;
+    font-size: 18px;
+}
+
+.inputCtn-cdu::placeholder{
+    color: black;
+}
+
+.linha-cdu{
+    width: 10%;
+    height: 100%;
+    /* background-color: indianred; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linhaCtn-cdu{
+    width: 5%;
+    height: 110%;
+    background-color: black;
+}
+
+.btnPass-cdu{
+    width: 100%;
+    height: 100%;
+
     background-color: white;
-
-    font-size: 20px;
-    font-family: share;
-
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .btn-cdu:hover{
-    border-color: #008763;
-    color: black;
+    transform: scale(1.1);
 }

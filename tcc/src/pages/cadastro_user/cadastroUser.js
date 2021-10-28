@@ -19,107 +19,107 @@ export default class cadastroUser extends Component{
     {
         return(
             <View style={styles.container}>
+
                 <View style={styles.triangleCorner}/>
 
-                    <View style={styles.ctnCad}>
-                        <Text style={styles.h1}>Cadastro</Text>
+            <View style={styles.ctnInput}>
+                <View style={styles.h1}>
+                  <Text style={styles.h1Style}>Cadastro</Text>
+                </View>
 
-                        <View style={styles.NomeCtn}>
-                            <TextInput
-                             style={styles.inputNome}
-                             placeholder="Nome completo"
-                             placeholderTextColor="black"
-                             />
-                        </View>
+                <View style={styles.inputStyle}>
+                  <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Nome completo"
+                    placeholderTextColor="black"
+                    keyboardType="default"
+                  />
 
-                        <View style={styles.InfsInput}>
-                            <TextInput
-                             style={styles.Infs}
-                             placeholder="Email"
-                             placeholderTextColor="black"
-                             />
+                  <TextInputMask
+                  type={'cel-phone'}
+                  options={{
+                    maskType: 'BRL',
+                    withDDD: true,
+                    dddMask: '(99) '
+                  }}
+                  value={this.state.celular}
+                  onChangeText={ x => 
+                  {
+                    this.setState({
+                      celular : x
+                    })
+                  }} 
+                    style={styles.TxtInput}
+                    placeholder="Celular"
+                    placeholderTextColor="black"
+                  />
+                </View>
 
-                            <TextInput
-                             style={styles.Infs}
-                             placeholder="Senha"
-                             placeholderTextColor="black"
-                             keyboardType="visible-password"
-                             secureTextEntry={true}
-                             />
-                        </View>
 
-                        <View style={styles.ctnMeio}>
-                            <TextInputMask
-                            type={'cel-phone'}
-                            style={styles.Infs}
-                                options={{
-                                    maskType: 'BRL',
-                                    withDDD: true,
-                                    dddMask: '(99)'
-                                    }}
+                <View style={styles.inputStyle}>
+                <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Email"
+                    placeholderTextColor="black"
+                    keyboardType="email-address"
+                  />
 
-                                    value={this.state.celular}
-                                    onChangeText={text => {
-                                      this.setState({
-                                        celular: text
-                                      })
-                                    }}
-                             placeholder="Celular"
-                             placeholderTextColor="black"
-                             />
-                        </View>
-                        
-                        <View style={styles.ctnMeio}>
-                            <View style={styles.linha}></View>
-                            <Text style={styles.h2}>Endereço</Text>
-                            <View style={styles.linha}></View>
-                        </View>
+                <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Senha"
+                    placeholderTextColor="black"
+                    keyboardType="email-address"
+                    keyboardType="visible-password"
+                    secureTextEntry={true}
+                  />
+                </View>
 
-                        <View style={styles.ctnMeio}>
-                        <TextInputMask
-                            type={'custom'}
-                            style={styles.Infs}
-                                options={{
-                                    mask: '99999-999'
-                                    }}
 
-                                    value={this.state.CEP}
-                                    onChangeText={text => {
-                                      this.setState({
-                                       CEP: text
-                                      })
-                                    }}
-                             placeholder="CEP"
-                             placeholderTextColor="black"
-                             />
-                        </View>
+                <View style={styles.inputStyle}>
+                <TextInputMask
+                type={'custom'}
+                options={{
+                  mask : '99999-999'
+                }} 
+                value={this.state.CEP}
+                onChangeText={ x => {
+                  this.setState({
+                    CEP : x
+                  })
+                }}
+                    style={styles.TxtInput}
+                    placeholder="CEP"
+                    placeholderTextColor="black"
+                  />
 
-                        <View style={styles.ctnMeio}>
-                            <TouchableOpacity style={styles.btnCEP}>
-                                <Text style={styles.textBtn}>Buscar</Text>
-                            </TouchableOpacity>
-                        </View>
+                  <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Rua"
+                    placeholderTextColor="black"
+                  />
+                </View>
 
-                        <View style={styles.InfsInput}>
-                        <TextInput
-                             style={styles.Infs}
-                             placeholder="Complemento"
-                             placeholderTextColor="black"
-                             />
 
-                            <TextInput
-                             style={styles.Infs}
-                             placeholder="Rua"
-                             placeholderTextColor="black"
-                             />
-                        </View>
+                <View style={styles.inputStyle}>
+                <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Endereço"
+                    placeholderTextColor="black"
+                  />
+                   <TextInput 
+                    style={styles.TxtInput}
+                    placeholder="Complemento"
+                    placeholderTextColor="black"
+                  />
+                </View>
 
-                        <View style={styles.ctnMeio}>
-                            <TouchableOpacity style={styles.btnCEP}>
-                                <Text style={styles.textBtn}>Cadastrar</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
+                <View style={styles.btnInput}>
+                  <TouchableOpacity style={styles.btnCtn}>
+                    <Text style={styles.txtBtn}>Cadastrar</Text>
+                  </TouchableOpacity>
+                </View>
+            </View>
+
             </View>
         )
     }
@@ -138,102 +138,78 @@ const styles = StyleSheet.create({
     borderRightWidth: 300,
     borderTopWidth: 300,
     borderRightColor: "transparent",
-    borderTopColor: "#008763",
+    borderTopColor: "#00873B",
   },
 
-  ctnCad: {
-    // backgroundColor: 'green',
-    marginHorizontal: 30,
-    textAlign: 'center'
+  ctnInput : {
+    flex: 1,
+    // backgroundColor: 'blue',
+
+    justifyContent: 'space-around',
+
+    position: 'relative',
+    bottom: 30,
   },
 
   h1: {
-      fontSize: 30,
-      fontFamily: 'Arial'
+    flex: 0.1,
+    // backgroundColor: 'green',
+
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
-  NomeCtn: {
-    height: max,
-    width: max,
-    // backgroundColor: 'blue',
+  h1Style: {
+    fontSize : 25,
+    fontFamily : 'Arial',
+    fontWeight: 'bold',
   },
 
-  inputNome: {
-    height: 50,
-    width: max,
-    backgroundColor: 'white',
+  inputStyle: {
+    flex: 0.12,
+    // backgroundColor: 'yellow',
 
-    marginTop: 40,
-    paddingLeft: 10,
-    color: 'black',
-    fontSize: 18,
-    fontFamily: 'Arial',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
 
-    borderColor: '#008763',
-    borderWidth: 3,
-    borderRadius: 7,
-  },
-
-  InfsInput: {
-    height: max,
-    width: max,
-    marginTop: 20,
-    justifyContent: 'space-between',
-    flexDirection: "row",
   },
   
-  Infs: {
-    height: 50,
-    width: 150,
-    backgroundColor: 'white',
+  TxtInput: {
+    width: '40%',
+    height: '70%',
 
-    paddingLeft: 10,
-    color: 'black',
-    fontSize: 18,
-    fontFamily: 'Arial',
+    borderColor: '#00873B',
+    borderWidth: 4,
+    borderRadius: 10,
 
-    borderColor: '#008763',
-    borderWidth: 3,
-    borderRadius: 7,
+    fontSize: 17,
+    paddingLeft: 7,
   },
 
-  ctnMeio: {
-    height: max,
-    width: max,
-    alignItems: 'center',
+  btnInput: {
+    flex: 0.1,
+    // backgroundColor: 'orange',
+
     justifyContent: 'center',
-    flexDirection: "row",
-    marginTop: 20,
-  },    
-
-  linha: {
-    borderWidth: 1,
-    width: 40,
+    alignItems: 'center',
   },
 
-  h2: {
-    padding: 10,
-    fontFamily: 'Arial',
-    fontSize: 25,
-  },
-
-  btnCEP: {
-    height: 50,
-    width: 150,
+  btnCtn: {
+    width: '35%',
+    height: '80%',
     backgroundColor: '#008763',
 
-    borderColor: '#008763',
-    borderWidth: 3,
-    borderRadius: 7,
-
     justifyContent: 'center',
     alignItems: 'center',
+
+    borderRadius: 10,
   },
 
-  textBtn: {
+  txtBtn: {
     color: 'white',
-    fontFamily: 'Arial',
     fontSize: 20,
+    fontFamily : 'Arial',
   },
-
+  
 })

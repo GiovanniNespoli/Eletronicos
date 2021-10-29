@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Style, TouchableOpacity } from "react-native";
+
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import { TextInputMask } from 'react-native-masked-text'
 import { max } from "react-native-reanimated";
@@ -20,7 +21,9 @@ export default class cadastroUser extends Component{
         return(
             <View style={styles.container}>
 
-                <View style={styles.triangleCorner}/>
+                <View style={styles.RetangleCtn}>
+                  <Text style={styles.RetangleH1}>- cadastro</Text>
+                </View>
 
             <View style={styles.ctnInput}>
                 <View style={styles.h1}>
@@ -130,15 +133,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  triangleCorner: {
-    width: 0,
-    height: 0,
-    backgroundColor: "transparent",
-    borderStyle: "solid",
-    borderRightWidth: 300,
-    borderTopWidth: 300,
-    borderRightColor: "transparent",
-    borderTopColor: "#00873B",
+  RetangleCtn: {
+    flex: 0.25,
+    backgroundColor: '#00873B',
+
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+
+    paddingLeft: 20,
+  },
+
+  RetangleH1: {
+    color : 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  
   },
 
   ctnInput : {
@@ -148,7 +158,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
 
     position: 'relative',
-    bottom: 30,
+    bottom: 10,
   },
 
   h1: {
